@@ -59,6 +59,20 @@
 </section>
 <section class="contact-section px-3 py-5 p-md-5">
 	<div class="container">
+		@if (!string.IsNullOrWhiteSpace(@ViewBag.success))
+		{
+		<div class="alert-success p-5">
+				<p>@ViewBag.success</p>
+		</div>
+		}
+		@if (!string.IsNullOrWhiteSpace(@ViewBag.error))
+		{
+		<div class="alert-danger p-5">
+				<p>@ViewBag.error</p>
+		</div>
+		}
+
+		
 		<form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="post" asp-action="Contact">
 			<h3 class="text-center mb-3">در دسترس باشید!</h3>
 			<div class="form-row">
