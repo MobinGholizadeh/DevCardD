@@ -9,13 +9,12 @@
 
 <section class="cta-section theme-bg-light py-5">
 	<div class="container text-center single-col-max-width">
-		<h2 class="heading">ارتباط با ما</h2>
+		<h2 class="heading">Contact with us</h2>
 		<div class="intro">
 			<p>
-				شما می توانید از طریق فرم زیر با ما ارتباط بگیرید. لطفا پس از پرکردن آیتم ها، پیغام مورد نظر را
-				نوشته و ارسال کنید.
+				You can write whatever you want to contact with us through this panel
 			</p>
-			<p>از طریق شبکه های اجتماعی با ما در ارتباط باشید</p>
+			<p>Keep on touch through these links in Social Media</p>
 			<ul class="list-inline mb-0">
 				<li class="list-inline-item mb-3">
 					<a class="twitter" href="#">
@@ -74,37 +73,34 @@
 
 		
 		<form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="post" asp-action="Contact">
-			<h3 class="text-center mb-3">در دسترس باشید!</h3>
+			<h3 class="text-center mb-3">Keep on touch <h3>
 			<div class="form-row">
 				<div class="form-group col-md-6">
-					<label class="sr-only" asp-for="Name">نام</label>
-					<input type="text" class="form-control" asp-for="Name" placeholder="نام"
+					<label class="sr-only" asp-for="Name">Name</label>
+					<input type="text" class="form-control" asp-for="Name" placeholder="Name"
 						   minlength="2" required="" aria-required="true">
 					<span asp-validation-for="Name" class="text-danger"></span>
 				</div>
 				<div class="form-group col-md-6">
-					<label class="sr-only" asp-for="Email">ایمیل</label>
-					<input type="email" class="form-control" asp-for="Email" placeholder="ایمیل"
+					<label class="sr-only" asp-for="Email">Email</label>
+					<input type="email" class="form-control" asp-for="Email" placeholder="Email"
 						   required="" aria-required="true">
 					<span asp-validation-for="Email" class="text-danger"></span>
 				</div>
 				<div class="form-group col-12">
-					<select  class="custom-select" asp-for="Service">
-						<option selected>سرویس مورد نظر خود را انتخاب کنید...</option>
-						<option value="basic">نقره ای</option>
-						<option value="standard">طلایی</option>
-						<option value="premium">پلاتین</option>
-						<option value="not sure">الماس</option>
+					<select  class="custom-select" asp-for="Service" asp-items="Model.Services">
+						<option value="0" selected="selected">Choose your service</option>
+
 					</select>
 				</div>
 				<div class="form-group col-12">
-					<label class="sr-only" asp-for="Message">پیغام شما</label>
+					<label class="sr-only" asp-for="Message">Your message</label>
 					<textarea class="form-control" asp-for="Message"
-							  placeholder="پیغام خود را وارد نمایید ..." rows="10" required=""
+							  placeholder=" Enter your desired message ..." rows="10" required=""
 							  aria-required="true"></textarea>
 				</div>
 				<div class="form-group col-12">
-					<button type="submit" class="btn btn-block btn-primary py-2">ارسال</button>
+					<button type="submit" class="btn btn-block btn-primary py-2">Send</button>
 				</div>
 			</div>
 		</form>

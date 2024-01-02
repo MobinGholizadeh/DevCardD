@@ -56,8 +56,8 @@ section {
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    font-family: IranSans;
     font-size: 1rem;
     font-weight: 400;
     line-height: 2;
@@ -11968,3 +11968,19 @@ body {
 .config-panel .close .fa {
     color: #fff
 }
+
+
+
+/* Define a class for styling the anchor tag */
+.link-styled {
+    text-decoration: none;
+    color: #0077cc; /* Your desired color */
+    transition: color 0.3s ease;
+}
+
+    .link-styled:hover,
+    .link-styled:focus {
+        text-decoration: underline;
+        color: #004466; /* Darker shade or a different color on hover/focus */
+        cursor: pointer;
+    }

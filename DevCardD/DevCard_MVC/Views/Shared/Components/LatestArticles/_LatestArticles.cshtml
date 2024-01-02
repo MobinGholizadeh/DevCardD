@@ -5,7 +5,7 @@
 
 <section class="latest-blog-section p-3 p-lg-5">
     <div class="container">
-        <h2 class="section-title font-weight-bold mb-5">آخرین مقالات</h2>
+        <h2 class="section-title font-weight-bold mb-5">Last articles</h2>
         <div class="row">
             @foreach(var article in Model)
             {
@@ -14,14 +14,14 @@
                         <img class="card-img-top" src="~/assets/images/blog/@article.Image" alt="@article.Title" title="@article.Description">
                         <div class="card-body">
                             <h5 class="card-title">
-                                <a class="theme-link" href="blog-post.html">
+                                <a class="link-style" href="blog-post.html">
                                     @article.Title
                                 </a>
                             </h5>
                             <p class="card-text">
                                 @article.Description
                             </p>
-                            <p class="mb-0"><a class="more-link" href="#">ادامه مطلب</a></p>
+                            <p class="mb-0"><a class="more-link" href="#">Continue</a></p>
 
                         </div>
                     </div>

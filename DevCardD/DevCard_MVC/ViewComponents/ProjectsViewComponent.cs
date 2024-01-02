@@ -9,10 +9,10 @@ namespace DevCard_MVC.ViewComponents
 		{
 			var projects = new List<Project>
 			{
-				new Project (  1,  "Taxi" ,  " IDK " , "project-1.jpg",  "Snapp"),
-				new Project (  2,  "ZoodFood" ,  " IDK ZoodFood " ,  "project-2.jpg", "ZoodFood"),
-				new Project (  3,  "Schools" ,  " Schools IDK " , "project-3.jpg", "MONOP"),
-				new Project (  4,  "SpaceX" ,  " SpaceX IDK " ,"project-4.jpg",  "NASA"),
+				new Project (  1,  "Taxi" ,  " Online taxi service " , "project-1.jpg",  "Snapp"),
+				new Project (  2,  "ZoodFood" ,  " Online food ordering service " ,  "project-2.jpg", "ZoodFood"),
+				new Project (  3,  "Schools" ,  " Schools service" , "project-3.jpg", "MONOP"),
+				new Project (  4,  "SpaceX" ,  " SpaceX service" ,"project-4.jpg",  "NASA"),
 			};
 			return View("_Projects" , projects);
 		}

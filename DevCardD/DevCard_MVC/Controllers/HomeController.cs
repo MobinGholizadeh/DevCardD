@@ -1,6 +1,7 @@
 using DevCard_MVC.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 
 namespace DevCard_MVC.Controllers
@@ -8,12 +9,13 @@ namespace DevCard_MVC.Controllers
 	public class HomeController : Controller
 	{
 
-
-		public HomeController()
+		private readonly List<Service> _Services = new List<Service>
 		{
-
-		}
-
+			new Service(1 , "Silver"),
+			new Service(2 , "Golden"),
+			new Service(3 , "Platnium"),
+			new Service(4 , "Diamond"),
+		};
 		public IActionResult Index()
 		{
 			return View();
@@ -21,7 +23,10 @@ namespace DevCard_MVC.Controllers
 		[HttpGet]
 		public IActionResult Contact()
 		{
-			var model = new ContactForm();
+			var model = new ContactForm
+			{
+				Services = new SelectList(_Services , "Id" , "Name")
+			};
 			return View(model);
 		}
 
