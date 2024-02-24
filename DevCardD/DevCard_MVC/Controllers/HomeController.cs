@@ -1,3 +1,4 @@
+using DevCard_MVC.Data;
 using DevCard_MVC.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -5,7 +6,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 
 namespace DevCard_MVC.Controllers
+
 {
+	[Route("Home/Products")]
+	//examples
+	//localhost:5001/inventory/products/index
+	//localhost:5001/inventory/products/contactpage
 	public class HomeController : Controller
 	{
 
@@ -16,12 +22,23 @@ namespace DevCard_MVC.Controllers
 			new Service(3 , "Platnium"),
 			new Service(4 , "Diamond"),
 		};
-		public IActionResult Index()
+
+		[Route("MyIndex/{name?}")]
+		public IActionResult Index(string name)
 		{
 			return View();
 		}
+
+		public IActionResult ProjectDetails (long id)
+		{
+			var projects = ProjectStore.GetProjectBy(id);
+			return View(projects);
+		}
+
+
 		[HttpGet]
-		public IActionResult Contact()
+		[Route("ContactPage")]
+		public IActionResult Contact(long id)
 		{
 			var model = new ContactForm
 			{

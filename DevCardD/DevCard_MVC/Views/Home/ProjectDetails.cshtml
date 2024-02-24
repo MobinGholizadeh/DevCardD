@@ -1,0 +1,55 @@
+﻿@model Project
+
+@{
+    ViewData["Title"] = "ProjectDetails";
+
+}
+
+
+<section class="cta-section theme-bg-light py-5">
+	<div class="container text-center single-col-max-width">
+		<h2 class="heading">Contact with us</h2>
+		<div class="intro">
+			<p>
+				You can write whatever you want to contact with us through this panel
+			</p>
+			<p>Keep on touch through these links in Social Media</p>
+		</div>
+	</div>
+</section>
+<section class="contact-section px-3 py-5 p-md-5">
+	<div class="container">
+		
+		<table class="table table-bordered table-active table-hover table-dark">
+
+			<thead>
+				<tr>
+
+					<td>Id</td>
+					<td>Image</td>
+					<td>Name</td>
+					<td>Description</td>
+					<td>Client</td>
+
+				</tr>
+
+			</thead>
+			<tbody>
+
+				<tr>
+
+					<td>@Model.Id</td>
+					<td><img src="~/assets/images/project/@Model.Image" width="100px"/></td>
+					<td>@Model.Name</td>
+					<td>@Model.Description</td>
+					<td>@Model.Client</td>
+
+				</tr>
+
+			</tbody>
+
+			
+		</table>		
+			
+	</div>
+</section>

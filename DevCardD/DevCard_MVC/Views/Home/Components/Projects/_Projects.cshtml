@@ -15,7 +15,7 @@
 						<div class="col-lg-8">
 							<div class="card-body">
 								<h5 class="card-title">
-									<a href="project.html" class="link-styled">
+										<a asp-controller="Home" asp-action="ProjectDetails" asp-route-id ="@project.Id" class="link-styled">
 									@project.Id : @project.Name
 									</a>
 								</h5>
